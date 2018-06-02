@@ -1,77 +1,90 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.tigris.jsapar</groupId>
-	<artifactId>jsapar-examples</artifactId>
-	<version>0.1-SNAPSHOT</version>
-	<name>JSaPar-Examples</name>
-	<url>https://github.com/org-tigris-jsapar/jsapar-examples</url>
-	<description>
-     The JSaPar Example project containing all the examples on how to use the JSaPar library to its fullness.
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.tigris.jsapar</groupId>
+    <artifactId>jsapar-examples</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <name>JSaPar-Examples</name>
+    <url>https://github.com/org-tigris-jsapar/jsapar-examples</url>
+    <description>
+        The JSaPar Example project containing all the examples on how to use the JSaPar library to its fullness.
     </description>
-	<organization>
-		<url>https://github.com/org-tigris-jsapar/</url>
-		<name>JSaPar</name>
-	</organization>
-	<developers>
-		<developer>
-			<name>Jonas Stenberg</name>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-		<developer>
-			<name>JSaPar Developer</name>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-	</developers>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<project.scm.id>github.com</project.scm.id>
-	</properties>
+    <organization>
+        <url>https://github.com/org-tigris-jsapar/</url>
+        <name>JSaPar</name>
+    </organization>
+    <developers>
+        <developer>
+            <name>Jonas Stenberg</name>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>JSaPar Developer</name>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <project.scm.id>github.com</project.scm.id>
+    </properties>
 
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.tigris.jsapar</groupId>
-			<artifactId>jsapar</artifactId>
-			<version>2.0.0.a2</version>
-			<scope>compile</scope>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.tigris.jsapar</groupId>
+            <artifactId>jsapar</artifactId>
+            <version>2.0.0.a4-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<!-- Java compiler configuration -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-			<!-- Handle release -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.3</version>
-				<configuration>
-					<tagNameFormat>@{project.version}</tagNameFormat>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <!-- Java compiler configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <!-- Handle release -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:org-tigris-jsapar/jsapar-examples.git</developerConnection>
+        <connection>scm:git:git@github.com:org-tigris-jsapar/jsapar-examples.git</connection>
+        <tag>HEAD</tag>
+    </scm>
+
 </project>
