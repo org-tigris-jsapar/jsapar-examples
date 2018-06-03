@@ -9,9 +9,14 @@ import java.io.IOException;
 
 public class TestAllExamples {
     @Test
-    public void testAll() throws SchemaException, IOException {
+    public void testA1() throws SchemaException, IOException {
         new ExampleA1ParseAndComposeCsv().parseCsv();
         new ExampleA1ParseAndComposeCsv().composeCsv();
+    }
+
+    @Test
+    public void testB1() throws SchemaException, IOException {
         new ExampleB1ConvertCsvToFixedWidth().convert();
     }
+
 }
