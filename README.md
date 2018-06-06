@@ -9,3 +9,14 @@
 
 # JSaPar Examples
 The [JSaPar](https://github.com/org-tigris-jsapar/jsapar) Example project containing all the examples on how to use the JSaPar library to its full potential.
+
+# Intoduction
+## a1 Simple parse and compose
+* Parsing simple unquoted CSV into internal Document structure.
+* Composing simple unquoted CSV based on same schema.
+# Basics
+## b1 Simple convert
+* Converting CSV into fixed width format using one schema for each.
+## b2 Convert CSV to Java Beans
+* Converting CSV into Java Beans using lambda.
+* Converting CSV into Java Beans using RecordingBeanEventListener.
