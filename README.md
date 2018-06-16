@@ -20,3 +20,6 @@ The [JSaPar](https://github.com/org-tigris-jsapar/jsapar) Example project contai
 ## b2 Convert CSV to Java Beans
 * Converting CSV into Java Beans using lambda.
 * Converting CSV into Java Beans using RecordingBeanEventListener.
+## b3 Convert Java Beans to CSV
+* Converting Java Beans one by one into CSV.
+* Converting a collection of Java Beans into CSV.
