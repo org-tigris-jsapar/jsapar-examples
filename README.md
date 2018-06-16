@@ -10,6 +10,9 @@
 # JSaPar Examples
 The [JSaPar](https://github.com/org-tigris-jsapar/jsapar) Example project containing all the examples on how to use the JSaPar library to its full potential.
 
+Examples are listed in packages where each package contains one example class plus all files necessary to run that 
+example. Each example class can however contain more than one example method.
+
 # Introduction
 ## a1 Simple parse and compose
 * Parsing simple unquoted CSV into internal Document structure.
