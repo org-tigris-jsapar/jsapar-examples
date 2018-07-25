@@ -26,3 +26,5 @@ example. Each example class can however contain more than one example method.
 ## b3 Convert Java Beans to CSV
 * Converting Java Beans one by one into CSV.
 * Converting a collection of Java Beans into CSV.
+## b4 Manipulating and filtering
+* Manipulating and filtering while converting CSV into fixed width format.
