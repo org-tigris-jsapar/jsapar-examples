@@ -13,11 +13,11 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringWriter;
 
-public class ExampleA1ParseAndComposeCsv {
+public class ExampleParseAndComposeCsv {
 
     public void parseCsv() throws SchemaException, IOException, JSaParException {
-        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/a1-csv-schema.xml");
-             Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/a1-csv-unquoted.csv")) {
+        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-schema.xml");
+             Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-unquoted.csv")) {
             Schema schema = Schema.ofXml(schemaReader);
             TextParser parser = new TextParser(schema);
 
@@ -53,7 +53,7 @@ public class ExampleA1ParseAndComposeCsv {
 
     public void composeCsv()
             throws SchemaException, IOException{
-        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/a1-csv-schema.xml");
+        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-schema.xml");
              StringWriter writer = new StringWriter()) {
             Schema schema = Schema.ofXml(schemaReader);
             TextComposer composer = new TextComposer(schema, writer);
@@ -82,7 +82,7 @@ public class ExampleA1ParseAndComposeCsv {
         }
     }
     public static void main(String[] args) {
-        ExampleA1ParseAndComposeCsv exampleA1 = new ExampleA1ParseAndComposeCsv();
+        ExampleParseAndComposeCsv exampleA1 = new ExampleParseAndComposeCsv();
         try {
             exampleA1.parseCsv();
             exampleA1.composeCsv();

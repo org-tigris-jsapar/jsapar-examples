@@ -6,20 +6,18 @@ import org.junit.Test;
 import java.beans.IntrospectionException;
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-
-public class ExampleB2ConvertCsvToBeanTest {
+public class ExampleConvertCsvToBeanTest {
 
     @Test
     public void convertToBeanLambda()
             throws ClassNotFoundException, SchemaException, IntrospectionException, IOException {
-        new ExampleB2ConvertCsvToBean().convertToBeanLambda();
+        new ExampleConvertCsvToBean().convertToBeanLambda();
     }
 
     @Test
     public void convertToBeanCollection()
             throws ClassNotFoundException, SchemaException, IntrospectionException, IOException {
-        new ExampleB2ConvertCsvToBean().convertToBeanCollection();
+        new ExampleConvertCsvToBean().convertToBeanCollection();
     }
 
 }

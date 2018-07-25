@@ -5,12 +5,10 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-
-public class ExampleB1ConvertCsvToFixedWidthTest {
+public class ExampleConvertCsvToFixedWidthTest {
 
     @Test
     public void convert() throws IOException, SchemaException {
-        new ExampleB1ConvertCsvToFixedWidth().convert();
+        new ExampleConvertCsvToFixedWidth().convert();
     }
 }

@@ -1,22 +1,22 @@
 package org.jsapar.examples.basics.b2;
 
 import org.jsapar.Text2BeanConverter;
-import org.jsapar.compose.bean.BeanEventListener;
 import org.jsapar.compose.bean.RecordingBeanEventListener;
-import org.jsapar.examples.basics.b1.ExampleB1ConvertCsvToFixedWidth;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
 
 import java.beans.IntrospectionException;
-import java.io.*;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ExampleB2ConvertCsvToBean {
+public class ExampleConvertCsvToBean {
 
     public void convertToBeanLambda()
             throws IOException, SchemaException, IntrospectionException, ClassNotFoundException {
-        try (Reader inSchemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/b2-csv-schema.xml");
-                Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/b2-csv-employees.csv")) {
+        try (Reader inSchemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-schema.xml");
+                Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-employees.csv")) {
             Schema parseSchema = Schema.ofXml(inSchemaReader);
             Text2BeanConverter<Employee> converter = new Text2BeanConverter<>(parseSchema);
             AtomicInteger counter = new AtomicInteger(
@@ -36,8 +36,8 @@ public class ExampleB2ConvertCsvToBean {
      */
     public void convertToBeanCollection()
             throws IOException, SchemaException, IntrospectionException, ClassNotFoundException {
-        try (Reader inSchemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/b2-csv-schema.xml");
-                Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/b2-csv-employees.csv")) {
+        try (Reader inSchemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-schema.xml");
+                Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-employees.csv")) {
             Schema parseSchema = Schema.ofXml(inSchemaReader);
             Text2BeanConverter<Employee> converter = new Text2BeanConverter<>(parseSchema);
             RecordingBeanEventListener<Employee> listener = new RecordingBeanEventListener<>();
@@ -48,7 +48,7 @@ public class ExampleB2ConvertCsvToBean {
     }
 
     public static void main(String[] args) {
-        ExampleB2ConvertCsvToBean exampleB1 = new ExampleB2ConvertCsvToBean();
+        ExampleConvertCsvToBean exampleB1 = new ExampleConvertCsvToBean();
         try {
             exampleB1.convertToBeanLambda();
             exampleB1.convertToBeanCollection();

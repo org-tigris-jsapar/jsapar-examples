@@ -5,17 +5,15 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-
-public class ExampleA1ParseAndComposeCsvTest {
+public class ExampleParseAndComposeCsvTest {
 
     @Test
     public void parseCsv() throws SchemaException, IOException {
-        new ExampleA1ParseAndComposeCsv().parseCsv();
+        new ExampleParseAndComposeCsv().parseCsv();
     }
 
     @Test
     public void composeCsv() throws SchemaException, IOException {
-        new ExampleA1ParseAndComposeCsv().composeCsv();
+        new ExampleParseAndComposeCsv().composeCsv();
     }
 }

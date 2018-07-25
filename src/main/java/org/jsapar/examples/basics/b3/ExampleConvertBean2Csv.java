@@ -6,13 +6,16 @@ import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
 
 import java.beans.IntrospectionException;
-import java.io.*;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringWriter;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ExampleB3ConvertBean2Csv {
+public class ExampleConvertBean2Csv {
 
     /**
      * Example of converting Employee beans one by one into a CSV defined by a schema.
@@ -22,7 +25,7 @@ public class ExampleB3ConvertBean2Csv {
 
         Collection<Employee> employees = makeEmployees();
 
-        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b3/b3-csv-schema.xml");
+        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b3/csv-schema.xml");
              StringWriter writer = new StringWriter()
         ) {
             Schema composeSchema = Schema.ofXml(schemaReader);
@@ -49,7 +52,7 @@ public class ExampleB3ConvertBean2Csv {
 
         Collection<Employee> employees = makeEmployees();
 
-        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b3/b3-csv-schema.xml");
+        try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b3/csv-schema.xml");
              StringWriter writer = new StringWriter()
         ) {
             Schema composeSchema = Schema.ofXml(schemaReader);
@@ -79,7 +82,7 @@ public class ExampleB3ConvertBean2Csv {
 
 
     public static void main(String[] args) {
-        ExampleB3ConvertBean2Csv example = new ExampleB3ConvertBean2Csv();
+        ExampleConvertBean2Csv example = new ExampleConvertBean2Csv();
         try {
             example.convertBean2Csv();
         } catch (Throwable e) {
