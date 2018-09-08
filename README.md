@@ -28,3 +28,8 @@ example. Each example class can however contain more than one example method.
 * Converting a collection of Java Beans into CSV.
 ## [b4](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b4) Manipulating and filtering
 * Manipulating and filtering while converting CSV into fixed width format.
+# Schema basics
+## [c1](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/schemabasics/c1) Line condition cells
+* Parsing of CSV file where first cell denotes the type of the line to be parsed.
+* Parsing of fixed width file where first cell denotes the type of the line to be parsed.
+* Converting from fixed width file to CSV file where first cell denotes the type of the line to be converted.
