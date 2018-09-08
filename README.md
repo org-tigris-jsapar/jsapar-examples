@@ -14,17 +14,17 @@ Examples are listed in packages where each package contains one example class pl
 example. Each example class can however contain more than one example method.
 
 # Introduction
-## [a1](tree/master/src/main/java/org/jsapar/examples/introduction/a1) Simple parse and compose
+## [a1](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/introduction/a1) Simple parse and compose
 * Parsing simple unquoted CSV into internal Document structure.
 * Composing simple unquoted CSV based on same schema.
 # Basics
-## b1 Simple convert
+## [b1](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b1) Simple convert
 * Converting CSV into fixed width format using one schema for each.
-## b2 Convert CSV to Java Beans
+## [b2](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b2) Convert CSV to Java Beans
 * Converting CSV into Java Beans using lambda.
 * Converting CSV into Java Beans using RecordingBeanEventListener.
-## b3 Convert Java Beans to CSV
+## [b3](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b3) Convert Java Beans to CSV
 * Converting Java Beans one by one into CSV.
 * Converting a collection of Java Beans into CSV.
-## b4 Manipulating and filtering
+## [b4](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b4) Manipulating and filtering
 * Manipulating and filtering while converting CSV into fixed width format.
