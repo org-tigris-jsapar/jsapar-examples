@@ -33,3 +33,5 @@ example. Each example class can however contain more than one example method.
 * Parsing of CSV file where first cell denotes the type of the line to be parsed.
 * Parsing of fixed width file where first cell denotes the type of the line to be parsed.
 * Converting from fixed width file to CSV file where first cell denotes the type of the line to be converted.
+## [c2](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/schemabasics/c2) Empty cell pattern
+* Parsing of CSV file where the schema of a cell has a pattern that if the content matches, the content is regarded as empty.
