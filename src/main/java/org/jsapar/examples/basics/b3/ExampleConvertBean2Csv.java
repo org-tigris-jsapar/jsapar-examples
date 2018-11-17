@@ -21,7 +21,7 @@ public class ExampleConvertBean2Csv {
      * Example of converting Employee beans one by one into a CSV defined by a schema.
      */
     public void convertBean2Csv()
-            throws IOException, SchemaException, IntrospectionException, ClassNotFoundException {
+            throws IOException, SchemaException {
 
         Collection<Employee> employees = makeEmployees();
 
