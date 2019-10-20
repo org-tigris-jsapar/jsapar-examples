@@ -5,7 +5,6 @@ import org.jsapar.BeanCollection2TextConverter;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
 
-import java.beans.IntrospectionException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -48,7 +47,7 @@ public class ExampleConvertBean2Csv {
      * Example of converting a collection of Employee beans into a CSV defined by a schema.
      */
     public void convertBeanCollection2Csv()
-            throws IOException, SchemaException, IntrospectionException, ClassNotFoundException {
+            throws IOException, SchemaException, ClassNotFoundException {
 
         Collection<Employee> employees = makeEmployees();
 

@@ -5,7 +5,6 @@ import org.jsapar.compose.bean.RecordingBeanEventListener;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
 
-import java.beans.IntrospectionException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -14,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ExampleConvertCsvToBean {
 
     public void convertToBeanLambda()
-            throws IOException, SchemaException, IntrospectionException, ClassNotFoundException {
+            throws IOException, SchemaException, ClassNotFoundException {
         try (Reader inSchemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-schema.xml");
                 Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-employees.csv")) {
             Schema parseSchema = Schema.ofXml(inSchemaReader);
@@ -35,7 +34,7 @@ public class ExampleConvertCsvToBean {
      * Same example as above but using {@link RecordingBeanEventListener}
      */
     public void convertToBeanCollection()
-            throws IOException, SchemaException, IntrospectionException, ClassNotFoundException {
+            throws IOException, SchemaException, ClassNotFoundException {
         try (Reader inSchemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-schema.xml");
                 Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b2/csv-employees.csv")) {
             Schema parseSchema = Schema.ofXml(inSchemaReader);
