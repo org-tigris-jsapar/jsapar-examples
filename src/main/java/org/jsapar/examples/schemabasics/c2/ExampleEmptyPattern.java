@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringWriter;
 
+/**
+ * This example demonstrates the usage of emptycondition in a schema while parsing a source.
+ */
 public class ExampleEmptyPattern {
 
     public void parseCsv() throws SchemaException, IOException, JSaParException {
