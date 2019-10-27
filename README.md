@@ -20,21 +20,21 @@ example. Each example class can however contain more than one example method.
 # Basics
 ## [b1](src/main/java/org/jsapar/examples/basics/b1) Simple convert
 * Converting CSV into fixed width format using one schema for each.
-## [b2](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b2) Convert CSV to Java Beans
+## [b2](src/main/java/org/jsapar/examples/basics/b2) Convert CSV to Java Beans
 * Converting CSV into Java Beans using lambda.
 * Converting CSV into Java Beans using RecordingBeanEventListener.
-## [b3](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b3) Convert Java Beans to CSV
+## [b3](src/main/java/org/jsapar/examples/basics/b3) Convert Java Beans to CSV
 * Converting Java Beans one by one into CSV.
 * Converting a collection of Java Beans into CSV.
-## [b4](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b4) Manipulating and filtering
+## [b4](src/main/java/org/jsapar/examples/basics/b4) Manipulating and filtering
 * Manipulating and filtering while converting CSV into fixed width format.
 # Schema basics
-## [c1](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/schemabasics/c1) Line condition cells
+## [c1](src/main/java/org/jsapar/examples/schemabasics/c1) Line condition cells
 * Parsing of CSV file where first cell denotes the type of the line to be parsed.
 * Parsing of fixed width file where first cell denotes the type of the line to be parsed.
 * Converting from fixed width file to CSV file where first cell denotes the type of the line to be converted.
-## [c2](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/schemabasics/c2) Empty cell pattern
+## [c2](src/main/java/org/jsapar/examples/schemabasics/c2) Empty cell pattern
 * Parsing of CSV file where the schema of a cell has a pattern that if the content matches, the content is regarded as empty.
-## [c3](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/schemabasics/c3) Quoting
+## [c3](src/main/java/org/jsapar/examples/schemabasics/c3) Quoting
 * Parsing of CSV file where the schema specifies a quote character and where some of the cells are quoted.
 * Composing of CSV where the schema specifies that one of the cells should always be quoted and where other cells are automatically quoted when needed.
