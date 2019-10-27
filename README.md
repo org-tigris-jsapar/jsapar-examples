@@ -14,11 +14,11 @@ Examples are listed in packages where each package contains one example class pl
 example. Each example class can however contain more than one example method.
 
 # Introduction
-## [a1](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/introduction/a1) Simple parse and compose
+## [a1](src/main/java/org/jsapar/examples/introduction/a1) Simple parse and compose
 * Parsing simple unquoted CSV into internal Document structure.
 * Composing simple unquoted CSV based on same schema.
 # Basics
-## [b1](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b1) Simple convert
+## [b1](src/main/java/org/jsapar/examples/basics/b1) Simple convert
 * Converting CSV into fixed width format using one schema for each.
 ## [b2](https://github.com/org-tigris-jsapar/jsapar-examples/tree/master/src/main/java/org/jsapar/examples/basics/b2) Convert CSV to Java Beans
 * Converting CSV into Java Beans using lambda.
