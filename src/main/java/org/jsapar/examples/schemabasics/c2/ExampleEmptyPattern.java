@@ -25,8 +25,8 @@ public class ExampleEmptyPattern {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener listener = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, listener);
+            DocumentBuilderLineEventListener documentBuilder = new DocumentBuilderLineEventListener(document);
+            parser.parse(fileReader, documentBuilder);
 
             assert 10 == document.size();
             // Access lines with stream
