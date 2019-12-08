@@ -28,8 +28,8 @@ public class ExampleQuotedCsv {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener listener = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, listener);
+            DocumentBuilderLineEventListener documentBuilder = new DocumentBuilderLineEventListener(document);
+            parser.parse(fileReader, documentBuilder);
 
             assert 3 == document.size();
             // Access lines with stream
@@ -99,8 +99,8 @@ public class ExampleQuotedCsv {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener listener = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, listener);
+            DocumentBuilderLineEventListener documentBuilder = new DocumentBuilderLineEventListener(document);
+            parser.parse(fileReader, documentBuilder);
 
             assert 3 == document.size();
             // Access lines with stream
