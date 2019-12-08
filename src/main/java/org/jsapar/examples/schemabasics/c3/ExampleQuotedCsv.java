@@ -4,6 +4,7 @@ import org.jsapar.TextComposer;
 import org.jsapar.TextParser;
 import org.jsapar.error.JSaParException;
 import org.jsapar.model.*;
+import org.jsapar.parse.DocumentBuilderLineConsumer;
 import org.jsapar.parse.DocumentBuilderLineEventListener;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
@@ -28,8 +29,8 @@ public class ExampleQuotedCsv {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener documentBuilder = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, documentBuilder);
+            DocumentBuilderLineConsumer documentBuilder = new DocumentBuilderLineConsumer(document);
+            parser.parseForEach(fileReader, documentBuilder);
 
             assert 3 == document.size();
             // Access lines with stream
@@ -99,8 +100,8 @@ public class ExampleQuotedCsv {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener documentBuilder = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, documentBuilder);
+            DocumentBuilderLineConsumer documentBuilder = new DocumentBuilderLineConsumer(document);
+            parser.parseForEach(fileReader, documentBuilder);
 
             assert 3 == document.size();
             // Access lines with stream

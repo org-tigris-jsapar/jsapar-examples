@@ -6,6 +6,7 @@ import org.jsapar.error.JSaParException;
 import org.jsapar.model.Document;
 import org.jsapar.model.Line;
 import org.jsapar.model.LineUtils;
+import org.jsapar.parse.DocumentBuilderLineConsumer;
 import org.jsapar.parse.DocumentBuilderLineEventListener;
 import org.jsapar.schema.Schema;
 
@@ -26,8 +27,8 @@ public class ExampleLineCondition {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener listener = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, listener);
+            DocumentBuilderLineConsumer documentBuilder = new DocumentBuilderLineConsumer(document);
+            parser.parseForEach(fileReader, documentBuilder);
 
             Line headerLine = document.getLine(0);
             assert "csv-linecondition.csv".equals(LineUtils.getStringCellValue(headerLine, "FileName"));
@@ -58,8 +59,8 @@ public class ExampleLineCondition {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener listener = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, listener);
+            DocumentBuilderLineConsumer documentBuilder = new DocumentBuilderLineConsumer(document);
+            parser.parseForEach(fileReader, documentBuilder);
 
             Line headerLine = document.getLine(0);
             assert "Example c1".equals(LineUtils.getStringCellValue(headerLine, "FileName"));

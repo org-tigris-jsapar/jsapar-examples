@@ -4,6 +4,7 @@ import org.jsapar.TextComposer;
 import org.jsapar.TextParser;
 import org.jsapar.error.JSaParException;
 import org.jsapar.model.*;
+import org.jsapar.parse.DocumentBuilderLineConsumer;
 import org.jsapar.parse.DocumentBuilderLineEventListener;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
@@ -22,8 +23,8 @@ public class ExampleParseAndComposeCsv {
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
-            DocumentBuilderLineEventListener listener = new DocumentBuilderLineEventListener(document);
-            parser.parse(fileReader, listener);
+            DocumentBuilderLineConsumer documentBuilder = new DocumentBuilderLineConsumer(document);
+            parser.parseForEach(fileReader, documentBuilder);
 
             assert 10 == document.size();
             // Access lines with stream
