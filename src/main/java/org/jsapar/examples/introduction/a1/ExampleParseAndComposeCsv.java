@@ -19,7 +19,7 @@ public class ExampleParseAndComposeCsv {
     public void parseCsv() throws SchemaException, IOException, JSaParException {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-schema.xml");
              Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-unquoted.csv")) {
-            Schema schema = Schema.ofXml(schemaReader);
+            Schema<?> schema = Schema.ofXml(schemaReader);
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
@@ -56,7 +56,7 @@ public class ExampleParseAndComposeCsv {
             throws SchemaException, IOException{
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-schema.xml");
              StringWriter writer = new StringWriter()) {
-            Schema schema = Schema.ofXml(schemaReader);
+            Schema<?> schema = Schema.ofXml(schemaReader);
             TextComposer composer = new TextComposer(schema, writer);
             // You can add cells with specific cell constructor
             Line line1 = new Line("Person")

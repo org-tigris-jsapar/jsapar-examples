@@ -96,7 +96,7 @@ public class ExampleQuotedCsv {
     public Document parseCsvRfc4180() throws SchemaException, IOException, JSaParException {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c3/csv-schema-rfc4180.xml");
              Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c3/csv-quoted-rfc4180.csv")) {
-            Schema schema = Schema.ofXml(schemaReader);
+            Schema<?> schema = Schema.ofXml(schemaReader);
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();

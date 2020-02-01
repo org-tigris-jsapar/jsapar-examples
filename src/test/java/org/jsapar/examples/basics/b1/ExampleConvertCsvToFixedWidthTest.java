@@ -11,4 +11,10 @@ public class ExampleConvertCsvToFixedWidthTest {
     public void convert() throws IOException, SchemaException {
         new ExampleConvertCsvToFixedWidth().convert();
     }
+
+    @Test
+    public void convert_schemaFromSource() throws IOException, SchemaException {
+        new ExampleConvertCsvToFixedWidth().convertWithSchemaFromSource();
+    }
+
 }
