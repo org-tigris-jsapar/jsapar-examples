@@ -5,7 +5,6 @@ import org.jsapar.TextParser;
 import org.jsapar.error.JSaParException;
 import org.jsapar.model.*;
 import org.jsapar.parse.DocumentBuilderLineConsumer;
-import org.jsapar.parse.DocumentBuilderLineEventListener;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
 
@@ -16,7 +15,7 @@ import java.io.StringWriter;
 
 public class ExampleParseAndComposeCsv {
 
-    public void parseCsv() throws SchemaException, IOException, JSaParException {
+    public void parseCsv() throws IOException, JSaParException {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-schema.xml");
              Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/introduction/a1/csv-unquoted.csv")) {
             Schema<?> schema = Schema.ofXml(schemaReader);
@@ -28,7 +27,7 @@ public class ExampleParseAndComposeCsv {
 
             assert 10 == document.size();
             // Access lines with stream
-            document.forEach(line->System.out.println(String.valueOf(line)));
+            document.forEach(System.out::println);
             
             // Access lines with iterator
             Line firstLine = document.iterator().next();
