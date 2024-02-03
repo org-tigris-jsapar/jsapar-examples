@@ -27,7 +27,7 @@ public class ExampleConvertBean2Csv {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b3/csv-schema.xml");
              StringWriter writer = new StringWriter()
         ) {
-            Schema composeSchema = Schema.ofXml(schemaReader);
+            Schema<?> composeSchema = Schema.ofXml(schemaReader);
 
 
             Bean2TextConverter<Employee> converter = new Bean2TextConverter<>(composeSchema, writer);
@@ -54,7 +54,7 @@ public class ExampleConvertBean2Csv {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/basics/b3/csv-schema.xml");
              StringWriter writer = new StringWriter()
         ) {
-            Schema composeSchema = Schema.ofXml(schemaReader);
+            Schema<?> composeSchema = Schema.ofXml(schemaReader);
 
 
             BeanCollection2TextConverter<Employee> converter = new BeanCollection2TextConverter<>(composeSchema);

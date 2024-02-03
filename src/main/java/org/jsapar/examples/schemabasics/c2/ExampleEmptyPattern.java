@@ -1,18 +1,17 @@
 package org.jsapar.examples.schemabasics.c2;
 
-import org.jsapar.TextComposer;
 import org.jsapar.TextParser;
 import org.jsapar.error.JSaParException;
-import org.jsapar.model.*;
+import org.jsapar.model.Document;
+import org.jsapar.model.Line;
+import org.jsapar.model.LineUtils;
 import org.jsapar.parse.DocumentBuilderLineConsumer;
-import org.jsapar.parse.DocumentBuilderLineEventListener;
 import org.jsapar.schema.Schema;
 import org.jsapar.schema.SchemaException;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.io.StringWriter;
 
 /**
  * This example demonstrates the usage of emptycondition in a schema while parsing a source.
@@ -22,7 +21,7 @@ public class ExampleEmptyPattern {
     public void parseCsv() throws SchemaException, IOException, JSaParException {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c2/csv-schema.xml");
              Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c2/csv-unquoted.csv")) {
-            Schema schema = Schema.ofXml(schemaReader);
+            Schema<?> schema = Schema.ofXml(schemaReader);
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();

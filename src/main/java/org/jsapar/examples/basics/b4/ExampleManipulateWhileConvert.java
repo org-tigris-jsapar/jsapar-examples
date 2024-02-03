@@ -26,8 +26,8 @@ public class ExampleManipulateWhileConvert {
                 Reader inReader = new FileReader("src/main/java/org/jsapar/examples/basics/b4/csv-unquoted.csv");
                 Writer outWriter = new StringWriter()) {
 
-            Schema parseSchema = Schema.ofXml(inSchemaReader);
-            Schema composeSchema = Schema.ofXml(outSchemaReader);
+            Schema<?> parseSchema = Schema.ofXml(inSchemaReader);
+            Schema<?> composeSchema = Schema.ofXml(outSchemaReader);
             Text2TextConverter converter = new Text2TextConverter(parseSchema, composeSchema);
 
             // This is where we add the manipulator

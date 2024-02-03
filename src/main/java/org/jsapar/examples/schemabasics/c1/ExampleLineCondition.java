@@ -7,7 +7,6 @@ import org.jsapar.model.Document;
 import org.jsapar.model.Line;
 import org.jsapar.model.LineUtils;
 import org.jsapar.parse.DocumentBuilderLineConsumer;
-import org.jsapar.parse.DocumentBuilderLineEventListener;
 import org.jsapar.schema.Schema;
 
 import java.io.*;
@@ -23,7 +22,7 @@ public class ExampleLineCondition {
     public void parseCsv() throws IOException {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c1/csv-linecondition-schema.xml");
              Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c1/csv-linecondition.csv")) {
-            Schema schema = Schema.ofXml(schemaReader);
+            Schema<?> schema = Schema.ofXml(schemaReader);
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
@@ -55,7 +54,7 @@ public class ExampleLineCondition {
     public void parseFixedWidth() throws IOException {
         try (Reader schemaReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c1/fw-linecondition-schema.xml");
              Reader fileReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c1/fw-linecondition.txt")) {
-            Schema schema = Schema.ofXml(schemaReader);
+            Schema<?> schema = Schema.ofXml(schemaReader);
             TextParser parser = new TextParser(schema);
 
             Document document = new Document();
@@ -98,8 +97,8 @@ public class ExampleLineCondition {
              Reader inReader = new FileReader("src/main/java/org/jsapar/examples/schemabasics/c1/fw-linecondition.txt");
              Writer outWriter = new StringWriter()
         ) {
-            Schema parseSchema = Schema.ofXml(inSchemaReader);
-            Schema composeSchema = Schema.ofXml(outSchemaReader);
+            Schema<?> parseSchema = Schema.ofXml(inSchemaReader);
+            Schema<?> composeSchema = Schema.ofXml(outSchemaReader);
             Text2TextConverter converter = new Text2TextConverter(parseSchema, composeSchema);
             converter.convert(inReader, outWriter);
             String output = outWriter.toString();
